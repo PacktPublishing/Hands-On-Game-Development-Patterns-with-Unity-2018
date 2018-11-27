@@ -19,8 +19,15 @@ public class ClientStrategy : MonoBehaviour
             // Applying custom seeking behaviour to a SideWinder;
             Missile sideWinderWithSonar = ScriptableObject.CreateInstance<SideWinder>();
             ISeekBehaviour sonar = new SeekWithSonar();
-            sideWinderWithSonar.setSeekBehavior(sonar);
+            sideWinderWithSonar.SetSeekBehavior(sonar);
             sideWinderWithSonar.ApplySeek();
         }
+    }
+
+    void OnGUI()
+    {
+        GUI.color = Color.black;
+        GUI.Label(new Rect(10, 10, 500, 20), "Press D to load a set of missiles and apply a seeking strategy to them.");
+        GUI.Label(new Rect(10, 30, 500, 20), "Look in the Debug Console to view the missile being launched.");
     }
 }

@@ -9,7 +9,7 @@ abstract public class Missile : ScriptableObject
         seekBehavior.Seek();
     }
 
-    public void setSeekBehavior(ISeekBehaviour seekType)
+    public void SetSeekBehavior(ISeekBehaviour seekType)
     {
         seekBehavior = seekType;
     }
