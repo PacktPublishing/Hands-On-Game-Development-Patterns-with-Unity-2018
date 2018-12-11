@@ -1,14 +1,9 @@
 ﻿using UnityEngine;
 
-public class LobbyCoordinator : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+public class LobbyCoordinator : MonoBehaviour
+{
+    public void AddPlayerToLobby()
+    {
+        Debug.Log("Adding a player to the lobby.");
+    }
 }
