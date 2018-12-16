@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-abstract public class RifleDecorator : MonoBehaviour, IRifle
+﻿abstract public class RifleDecorator : IRifle
 {
-    protected IRifle m_TempRifle;
+    protected IRifle m_DecoaratedRifle;
 
-    public string GetDescription()
+    public RifleDecorator(IRifle rifle)
     {
-        return m_TempRifle.GetDescription();
+        m_DecoaratedRifle = rifle;
     }
 
-    public float GetStrength()
+    public virtual float GetAccuracy()
     {
-        return m_TempRifle.GetStrength();
+        return m_DecoaratedRifle.GetAccuracy();
     }
 }
