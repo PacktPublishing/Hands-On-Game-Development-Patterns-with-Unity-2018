@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class LightingCoordinator : MonoBehaviour
+public class LightingCoordinator
 {
     public void TurnOffLights()
     {

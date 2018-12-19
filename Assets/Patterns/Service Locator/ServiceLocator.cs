@@ -15,9 +15,9 @@ public class ServiceLocator : Singleton<ServiceLocator>
     {
         m_Services = new Dictionary<object, object>();
 
-        this.m_Services.Add(typeof(LobbyCoordinator), new LobbyCoordinator());
-        this.m_Services.Add(typeof(CurrencyConverter), new CurrencyConverter());
-        this.m_Services.Add(typeof(LightingCoordinator), new LightingCoordinator());
+        m_Services.Add(typeof(LobbyCoordinator), new LobbyCoordinator());
+        m_Services.Add(typeof(CurrencyConverter), new CurrencyConverter());
+        m_Services.Add(typeof(LightingCoordinator), new LightingCoordinator());
     }
 
     public T GetService<T>()

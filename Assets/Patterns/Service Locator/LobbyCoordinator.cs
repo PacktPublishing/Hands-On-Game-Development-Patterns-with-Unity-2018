@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class LobbyCoordinator : MonoBehaviour
+public class LobbyCoordinator
 {
     public void AddPlayerToLobby()
     {

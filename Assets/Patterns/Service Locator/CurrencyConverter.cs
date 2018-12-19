@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class CurrencyConverter : MonoBehaviour
+public class CurrencyConverter
 {
     public void ConvertToUsDollar(int inGameCurrency)
     {
