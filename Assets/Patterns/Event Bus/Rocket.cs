@@ -11,7 +11,7 @@ public class Rocket : MonoBehaviour
 
     void OnDisable()
     {
-        EventBus.StopListening("Launch", Launch);
+       // EventBus.StopListening("Launch", Launch);
     }
 
     void Launch()

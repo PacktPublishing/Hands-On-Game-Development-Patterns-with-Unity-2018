@@ -4,6 +4,7 @@
 public class Singleton<T> : MonoBehaviour where T : Component
 {
     private static T m_Instance; // Making sure that instance is accessible only by the getter.
+    public static bool m_isQuitting;
 
     public static T Instance
     {

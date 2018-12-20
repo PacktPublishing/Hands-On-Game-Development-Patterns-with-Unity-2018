@@ -2,6 +2,13 @@
 
 public class Cannon : MonoBehaviour
 {
+    private bool m_IsQuitting;
+
+    void OnApplicationQuit()
+    {
+        m_IsQuitting = true;
+    }
+
     void OnEnable()
     {
         EventBus.StartListening("Shoot", Shoot);
@@ -9,7 +16,10 @@ public class Cannon : MonoBehaviour
 
     void OnDisable()
     {
-        EventBus.StopListening("Shoot", Shoot);
+        if (m_IsQuitting == false)
+        {
+            EventBus.StopListening("Shoot", Shoot);
+        }
     }
 
     void Shoot()

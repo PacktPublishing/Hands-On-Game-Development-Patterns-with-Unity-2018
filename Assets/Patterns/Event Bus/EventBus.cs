@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class EventBus : Singleton<EventBus>
 {
     private Dictionary<string, UnityEvent> m_EventDictionary;
+    private bool m_IsQutting;
 
     public override void Awake()
     {
@@ -37,12 +38,9 @@ public class EventBus : Singleton<EventBus>
     public static void StopListening(string eventName, UnityAction listener)
     {
         UnityEvent thisEvent = null;
-        Instance.m_EventDictionary.TryGetValue(eventName, out thisEvent);
-        thisEvent.RemoveListener(listener);
-
         if (Instance.m_EventDictionary.TryGetValue(eventName, out thisEvent))
         {
-            
+            thisEvent.RemoveListener(listener);
         }
     }
 
