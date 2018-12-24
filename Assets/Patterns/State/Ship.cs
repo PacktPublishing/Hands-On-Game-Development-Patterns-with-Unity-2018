@@ -6,10 +6,25 @@ public class Ship : MonoBehaviour
 
     void Awake ()
     {
-        m_CurrentState = new DisabledShipState();
+        m_CurrentState = new OperationalShipState();
         m_CurrentState.Execute(this);
+    }
 
+    public void ResetShip()
+    {
+        m_CurrentState = new OperationalShipState();
+        m_CurrentState.Execute(this);
+    }
+
+    public void TriggerRedAlert()
+    {
         m_CurrentState = new AlertShipState();
+        m_CurrentState.Execute(this);
+    }
+
+    public void DisableShip()
+    {
+        m_CurrentState = new DisabledShipState();
         m_CurrentState.Execute(this);
     }
 

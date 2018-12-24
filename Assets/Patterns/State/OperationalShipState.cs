@@ -2,6 +2,6 @@
 {
     public void Execute(Ship ship)
     {
-        ship.LogStatus("OPERATIONAL: everything operating as usual.");
+        ship.LogStatus("OPERATIONAL: ship operating as normal.");
     }
 }

@@ -2,26 +2,21 @@
 
 public class ClientState : MonoBehaviour
 {
+    public Ship ship;
+
     void Update()
     {
-        if (Input.GetKeyDown("b"))
+        if (Input.GetKeyDown("d"))
         {
-            IRifle rifle = new BasicRifle();
-            Debug.Log("Rifle has a basic configuration, current accurancy: " + rifle.GetAccuracy());
+            ship.DisableShip();
         }
 
         if (Input.GetKeyDown("s"))
         {
-            IRifle rifle = new BasicRifle();
-            rifle = new WithScope(rifle);
-            Debug.Log("Rifle is equipped with a scope, current accurancy: " + rifle.GetAccuracy());
         }
 
         if (Input.GetKeyDown("t"))
         {
-            IRifle rifle = new BasicRifle();
-            rifle = new WithScope(new WithStabilizer(rifle));
-            Debug.Log("Rifle is equipped with a scope and stabilizer, current accurancy: " + rifle.GetAccuracy());
         }
     }
 
