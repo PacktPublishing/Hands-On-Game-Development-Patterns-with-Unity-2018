@@ -6,13 +6,13 @@ public class Ship : MonoBehaviour
 
     void Awake ()
     {
-        m_CurrentState = new OperationalShipState();
+        m_CurrentState = new NormalShipState();
         m_CurrentState.Execute(this);
     }
 
-    public void ResetShip()
+    public void Normalize()
     {
-        m_CurrentState = new OperationalShipState();
+        m_CurrentState = new NormalShipState();
         m_CurrentState.Execute(this);
     }
 
