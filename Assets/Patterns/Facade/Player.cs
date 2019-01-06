@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player
 {
     public int GetHealth()
     {
@@ -11,9 +9,6 @@ public class Player : MonoBehaviour
 
     public int GetPlayerID()
     {
-        return 0001;
+        return 007;
     }
-
-
-
 }

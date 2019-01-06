@@ -1,5 +1,5 @@
 ﻿[System.Serializable]
-class PlayerData
+public class PlayerData
 {
     public int score;
     public int playerID;
