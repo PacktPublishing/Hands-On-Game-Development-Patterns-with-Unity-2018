@@ -1,7 +1,7 @@
 ﻿public interface IRobotPartVisitor
 {
-    public void visit(Robot robot);
-    public void visit(Battery battery);
-    public void visit(MechanicalArm mechanicalArm);
-    public void visit(ThermalImager thermalImager);
+    void Visit(Robot robot);
+    void Visit(Battery battery);
+    void Visit(MechanicalArm mechanicalArm);
+    void Visit(ThermalImager thermalImager);
 }

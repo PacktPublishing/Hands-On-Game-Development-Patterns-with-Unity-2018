@@ -1,4 +1,4 @@
 ﻿public interface IRobotPart
 {
-    public void accept(RobotPartVisitor computerPartVisitor);
+    void Accept(IRobotPartVisitor robotPartVisitor);
 }
