@@ -1,8 +1,8 @@
 ﻿abstract class Command
 {
-    protected Receiver m_Receiver;
+    protected RemoteControlDevice m_Receiver;
 
-    public Command(Receiver receiver)
+    public Command(RemoteControlDevice receiver)
     {
         m_Receiver = receiver;
     }

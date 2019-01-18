@@ -1,11 +1,11 @@
-﻿class ConcreteCommand : Command
+﻿class TurnOnCommand : Command
 {
-    public ConcreteCommand(Receiver receiver) : base(receiver)
+    public TurnOnCommand(RemoteControlDevice receiver) : base(receiver)
     {
     }
 
     public override void Execute()
     {
-        m_Receiver.Action();
+        m_Receiver.TurnOn();
     }
 }

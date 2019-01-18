@@ -8,8 +8,8 @@ namespace Pattern.Command_
         {
             if (Input.GetKeyDown(KeyCode.O))
             {
-                Receiver receiver = new Receiver();
-                Command command = new ConcreteCommand(receiver);
+                RemoteControlDevice receiver = new TelevisionReceiver();
+                Command command = new TurnOnCommand(receiver);
                 Invoker invoker = new Invoker();
 
                 invoker.SetCommand(command);
