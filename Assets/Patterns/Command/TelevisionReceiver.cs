@@ -4,11 +4,11 @@ class TelevisionReceiver : RemoteControlDevice
 {
     public override void TurnOn()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("TV turned on.");
     }
 
     public override void TurnOff()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("TV turned off.");
     }
 }
