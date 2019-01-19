@@ -2,7 +2,7 @@
 
 namespace Pattern.AbstractFactory
 {
-    public class Shopowner : INPC
+    public class Shopowner : IHuman
     {
         public void Speak()
         {

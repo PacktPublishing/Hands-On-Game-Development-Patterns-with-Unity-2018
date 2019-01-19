@@ -2,7 +2,7 @@
 
 namespace Pattern.AbstractFactory
 {
-    public class Farmer : INPC
+    public class Farmer : IHuman
     {
         public void Speak()
         {

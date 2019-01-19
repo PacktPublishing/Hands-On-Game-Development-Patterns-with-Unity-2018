@@ -2,7 +2,7 @@
 
 namespace Pattern.AbstractFactory
 {
-    public class Beggar : INPC
+    public class Beggar : IHuman
     {
         public void Speak()
         {

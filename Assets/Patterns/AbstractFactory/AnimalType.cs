@@ -1,7 +1,8 @@
 ﻿namespace Pattern.AbstractFactory
 {
-    public interface INPC
+    public enum AnimalType
     {
-        void Speak();
+        Dog,
+        Cat
     }
 }

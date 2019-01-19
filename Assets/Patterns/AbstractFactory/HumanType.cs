@@ -1,6 +1,6 @@
 ﻿namespace Pattern.AbstractFactory
 {
-    public enum NPCType
+    public enum HumanType
     {
         Farmer,
         Beggar,

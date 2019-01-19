@@ -4,22 +4,33 @@ namespace Pattern.AbstractFactory
 {
     public class NPCSpawner : MonoBehaviour
     {
-        public NPCFactory m_Factory;
+        private IAnimal m_Cat;
+        private IAnimal m_Dog;
 
-        private INPC m_Farmer;
-        private INPC m_Beggar;
-        private INPC m_Shopowner;
+        private IHuman m_Farmer;
+        private IHuman m_Beggar;
+        private IHuman m_Shopowner;
 
-        public void SpawnVillagers()
+        private AbstractFactory factory;
+
+        public void SpawnAnimals()
         {
-            /** 
-            We don't want to specify the class to instiate for each type of villager.
-            Instead, we ask the factory to "manufacture" it for us.
-            **/
+            factory = FactoryProducer.GetFactory(FactoryType.Animal);
 
-            m_Beggar = m_Factory.GetNPC(NPCType.Beggar);
-            m_Farmer = m_Factory.GetNPC(NPCType.Farmer);
-            m_Shopowner = m_Factory.GetNPC(NPCType.Shopowner);
+            m_Cat = factory.GetAnimal(AnimalType.Cat);
+            m_Dog = factory.GetAnimal(AnimalType.Dog);
+
+            m_Cat.Voice();
+            m_Dog.Voice();
+        }
+
+        public void SpawnHumans()
+        {
+            factory = FactoryProducer.GetFactory(FactoryType.Human);
+
+            m_Beggar = factory.GetHuman(HumanType.Beggar);
+            m_Farmer = factory.GetHuman(HumanType.Farmer);
+            m_Shopowner = factory.GetHuman(HumanType.Shopowner);
 
             m_Beggar.Speak();
             m_Farmer.Speak();
