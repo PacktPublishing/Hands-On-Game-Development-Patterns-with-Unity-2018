@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Pattern.FactoryMethod
+namespace Pattern.AbstractFactory
 {
     public class NPCSpawner : MonoBehaviour
     {

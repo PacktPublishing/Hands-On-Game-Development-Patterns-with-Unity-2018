@@ -1,4 +1,4 @@
-﻿namespace Pattern.FactoryMethod
+﻿namespace Pattern.AbstractFactory
 {
     public enum NPCType
     {
