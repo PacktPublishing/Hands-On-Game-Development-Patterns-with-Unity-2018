@@ -4,12 +4,12 @@ namespace Pattern.SpatialPartition
 {
     public class Client : MonoBehaviour
     {
-        private Grid grid;
-        private IUnit[] preys;
+        private Grid m_Grid;
+        private IUnit[] m_Preys;
 
         void Start()
         {
-            grid = new Grid(4, 4, 2);
+            m_Grid = new Grid(4, 4, 2);
             Debug.Log("A 4x4 grid was created with cells scaled at 2 units.");
         }
 
@@ -19,14 +19,14 @@ namespace Pattern.SpatialPartition
             {
                 IUnit prey;
                 int numberOfPrey = 5;
-                preys = new IUnit[numberOfPrey];
+                m_Preys = new IUnit[numberOfPrey];
 
                 for (int i = 0; i < numberOfPrey; i++)
                 {
                     prey = new Prey();
-                    grid.AddToRandomnPosition(prey);
-                    preys[i] = prey;
-                    Debug.Log("A new prey was spawned @ cell number: " + preys[i].GetGridPosition());
+                    m_Grid.AddToRandomnPosition(prey);
+                    m_Preys[i] = prey;
+                    Debug.Log("A new prey was spawned @ cell number: " + m_Preys[i].GetGridPosition());
                 }
             }
 
@@ -34,10 +34,10 @@ namespace Pattern.SpatialPartition
             {
                 IUnit predator;
                 predator = new Predator();
-                grid.AddToRandomnPosition(predator);
+                m_Grid.AddToRandomnPosition(predator);
                 Debug.Log("A predator was spawned @ cell number: " + predator.GetGridPosition());
 
-                int closest = grid.FindClosest(predator, preys);
+                int closest = m_Grid.FindClosest(predator, m_Preys);
                 Debug.Log("The closest prey is @ cell number: " + closest);
             }
         }
