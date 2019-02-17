@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class EventBus : Singleton<EventBus>
 {
     private Dictionary<string, UnityEvent> m_EventDictionary;
-    private bool m_IsQutting;
 
     public override void Awake()
     {
