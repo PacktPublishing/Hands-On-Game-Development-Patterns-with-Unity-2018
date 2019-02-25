@@ -10,23 +10,22 @@ public class SaveManager : Singleton<SaveManager>
     private CloudManager m_CloudManager;
 
     public void SaveGame(Player player)
-    {   
-        // Initializing a new Player Data 
-        m_PlayerData = new PlayerData();
+    {
+        // 1 - Show the save icon on the corner of the screen.
+        m_UIManager = new UIManager();
+        m_UIManager.DisplaySaveIcon();
 
+        // 2 - Initializing a new Player Data.
+        m_PlayerData = new PlayerData();
         m_PlayerData.health = player.GetHealth();
         m_PlayerData.playerID = player.GetPlayerID();
 
-        // Getting the player's high score.
+        // 3 - Getting the player's high score.
         m_ScoreManager = new ScoreManager();
         m_PlayerData.score = m_ScoreManager.GetScore(player.GetPlayerID());
         
-        // Let's serialize the player data.
+        // 4 - Let's serialize the player data.
         SerializePlayerData(m_PlayerData, true);
-
-        // Show the save icon on the corner of the screen.
-        m_UIManager = new UIManager();
-        m_UIManager.DisplaySaveIcon();
     }
     
     private void SerializePlayerData(PlayerData playerData, bool isCloudSave)
