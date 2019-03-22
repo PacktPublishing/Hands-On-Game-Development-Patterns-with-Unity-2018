@@ -29,9 +29,14 @@ public class ObjectPool : Singleton<ObjectPool>
 
                 int bufferAmount;
 
-                if (i < amountToBuffer.Length) bufferAmount = amountToBuffer[i];
+                if (i < amountToBuffer.Length)
+                {
+                    bufferAmount = amountToBuffer[i];
+                }
                 else
+                {
                     bufferAmount = defaultBufferAmount;
+                }
 
                 for (int n = 0; n < bufferAmount; n++)
                 {
@@ -44,7 +49,7 @@ public class ObjectPool : Singleton<ObjectPool>
             }
         }
 
-        // Pull an object of a specificy type from the pool.
+        // Pull an object of a specific type from the pool.
         public GameObject PullObject(string objectType)
         {
             bool onlyPooled = false;
@@ -54,7 +59,6 @@ public class ObjectPool : Singleton<ObjectPool>
 
                 if (prefab.name == objectType)
                 {
-
                     if (pooledObjects[i].Count > 0)
                     {
                         GameObject pooledObject = pooledObjects[i][0];
@@ -72,7 +76,6 @@ public class ObjectPool : Singleton<ObjectPool>
                     }
 
                     break;
-
                 }
             }
 
@@ -80,7 +83,7 @@ public class ObjectPool : Singleton<ObjectPool>
             return null;
         }
 
-        // Add object of a specificy type to the pool.
+        // Add object of a specific type to the pool.
         public void PoolObject(GameObject obj)
         {
             for (int i = 0; i < objects.Length; i++)
@@ -93,6 +96,7 @@ public class ObjectPool : Singleton<ObjectPool>
                     return;
                 }
             }
+
             Destroy(obj);
         }
     }

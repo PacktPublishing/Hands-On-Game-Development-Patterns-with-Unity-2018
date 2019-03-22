@@ -1,4 +1,4 @@
 ﻿public interface IDriver
 {
-    void Drive();
+    void Control(Bike bike);
 }

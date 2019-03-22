@@ -4,6 +4,12 @@ public class NitroEngine : IEngine
 {
     public void StartEngine()
     {
-        Debug.Log("Start the nitro engine.");
+        OpenNitroValve();
+        Debug.Log("Engine started");
+    }
+
+    private void OpenNitroValve()
+    {
+        Debug.Log("The nitro valve is open");
     }
 }

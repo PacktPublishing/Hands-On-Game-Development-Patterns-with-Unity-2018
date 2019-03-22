@@ -4,6 +4,12 @@ public class JetEngine : IEngine
 {
     public void StartEngine()
     {
-        Debug.Log("Start the jet engine.");
+        ActivateJetStream();
+        Debug.Log("Engine started");
+    }
+
+    private void ActivateJetStream()
+    {
+        Debug.Log("The jet stream is activated");
     }
 }

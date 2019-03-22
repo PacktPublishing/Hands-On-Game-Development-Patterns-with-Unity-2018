@@ -1,9 +1,7 @@
-﻿using UnityEngine;
-
-public class Sniper : Enemy, iCopyable
+﻿public class Sniper : Enemy
 {
-    public iCopyable Copy()
+    public void Shoot()
     {
-        return Instantiate(this);
+        // Implement shooting functionality.
     }
 }

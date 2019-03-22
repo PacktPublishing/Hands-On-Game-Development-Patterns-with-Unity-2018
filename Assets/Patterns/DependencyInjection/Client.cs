@@ -4,38 +4,49 @@ namespace Pattern.DependencyInjection
 {
     public class Client : MonoBehaviour
     {
-        public Bike m_Bike;
+        // Bike controlled by the player
+        public Bike m_PlayerBike;
 
-        private IDriver m_Driver;
-        private IEngine m_Engine;
+        // Bike controlled by an android (AI)
+        public Bike m_AndroidBike;
+
+        void Awake()
+        {
+            // Set up a bike with a human driver and jet engine
+            IEngine jetEngine = new JetEngine();
+            IDriver humanDriver = new HumanDriver();
+
+            m_PlayerBike.SetEngine(jetEngine);
+            m_PlayerBike.SetDriver(humanDriver);
+            m_PlayerBike.StartEngine();
+
+            // Set up a bike with a AI driver and a nitro engine
+            IEngine nitroEngine = new NitroEngine();
+            IDriver androidDriver = new AndroidDriver();
+
+            m_PlayerBike.SetEngine(jetEngine);
+            m_PlayerBike.SetDriver(humanDriver);
+            m_PlayerBike.StartEngine();
+        }
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.H))
-            {
-                m_Engine = new JetEngine();
-                m_Bike.SetEngine(m_Engine);
-
-                m_Driver = new HumanDriver();
-                m_Bike.SetDriver(m_Driver);
-            }
-
             if (Input.GetKeyDown(KeyCode.A))
             {
-                m_Engine = new NitroEngine();
-                m_Bike.SetEngine(m_Engine);
+                m_PlayerBike.TurnLeft();
+            }
 
-                m_Driver = new AndroidDriver();
-                m_Bike.SetDriver(m_Driver);
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                m_PlayerBike.TurnRight();
             }
         }
 
         void OnGUI()
         {
             GUI.color = Color.black;
-            GUI.Label(new Rect(10, 10, 500, 20), "Press H to load up a bike with a jet engine + human driver.");
-            GUI.Label(new Rect(10, 30, 500, 20), "Press A to load up a bike with a nitro engine + android driver.");
-            GUI.Label(new Rect(10, 50, 500, 20), "Look in the Debug Console to view the robot parts status.");
+            GUI.Label(new Rect(10, 10, 500, 20), "Press A to turn LEFT and D to turn RIGHT");
+            GUI.Label(new Rect(10, 30, 500, 20), "Look in the Debug Console to the status of your inputs");
         }
     }
 }

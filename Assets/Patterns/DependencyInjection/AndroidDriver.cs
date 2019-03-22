@@ -2,8 +2,11 @@
 
 public class AndroidDriver : IDriver
 {
-    public void Drive()
+    private Bike m_Bike;
+
+    public void Control(Bike bike)
     {
-        Debug.Log("An android is driving.");
+        m_Bike = bike;
+        Debug.Log("This bike will be controlled by an AI");
     }
 }

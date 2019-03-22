@@ -8,12 +8,29 @@ public class Bike : MonoBehaviour
     public void SetEngine(IEngine engine)
     {
         m_Engine = engine;
-        Debug.Log("The bike is running with the engine: " + m_Engine);
     }
 
     public void SetDriver(IDriver driver)
     {
         m_Driver = driver;
-        Debug.Log("The driver of the bike is a: " + driver);
+    }
+
+    public void StartEngine()
+    {
+        // Starting the engine
+        m_Engine.StartEngine();
+        
+        // Giving control of the bike to a driver (AI or player)
+        m_Driver.Control(this);
+    }
+
+    public void TurnLeft()
+    {
+        Debug.Log("The bike is turning left");
+    }
+
+    public void TurnRight()
+    {
+        Debug.Log("The bike is turning right");
     }
 }

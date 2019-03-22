@@ -2,8 +2,11 @@
 
 public class HumanDriver : IDriver
 {
-    public void Drive()
+    private Bike m_Bike;
+
+    public void Control(Bike bike)
     {
-        Debug.Log("A human is driving.");
+        m_Bike = bike;
+        Debug.Log("A human (player) will control the bike");
     }
 }

@@ -4,13 +4,16 @@ namespace Pattern.SpatialPartition
 {
     public class Client : MonoBehaviour
     {
+        public int m_SquareSize = 2;
+        public int m_NumberOfSquares = 16;
+
         private Grid m_Grid;
         private IUnit[] m_Preys;
 
         void Start()
         {
-            m_Grid = new Grid(4, 4, 2);
-            Debug.Log("A 4x4 grid was created with cells scaled at 2 units.");
+            m_Grid = new Grid(m_SquareSize, m_NumberOfSquares);
+            Debug.Log("Grid generated");
         }
 
         void Update()
@@ -26,7 +29,8 @@ namespace Pattern.SpatialPartition
                     prey = new Prey();
                     m_Grid.AddToRandomnPosition(prey);
                     m_Preys[i] = prey;
-                    Debug.Log("A new prey was spawned @ cell number: " + m_Preys[i].GetGridPosition());
+
+                    Debug.Log("A prey was spawned @ square: " + m_Preys[i].GetGridPosition());
                 }
             }
 
@@ -35,10 +39,10 @@ namespace Pattern.SpatialPartition
                 IUnit predator;
                 predator = new Predator();
                 m_Grid.AddToRandomnPosition(predator);
-                Debug.Log("A predator was spawned @ cell number: " + predator.GetGridPosition());
+                Debug.Log("A predator was spawned @ square: " + predator.GetGridPosition());
 
                 int closest = m_Grid.FindClosest(predator, m_Preys);
-                Debug.Log("The closest prey is @ cell number: " + closest);
+                Debug.Log("The closest prey is @ square: " + closest);
             }
         }
 
@@ -47,7 +51,7 @@ namespace Pattern.SpatialPartition
             GUI.color = Color.black;
             GUI.Label(new Rect(10, 10, 500, 20), "Press P to spawn prey on the grid.");
             GUI.Label(new Rect(10, 30, 500, 20), "Press H to hunt some prey.");
-            GUI.Label(new Rect(10, 50, 500, 20), "Monitor the Debug Console to view the output.");
+            GUI.Label(new Rect(10, 50, 500, 20), "Open Debug Console to view the output.");
         }
     }
 }

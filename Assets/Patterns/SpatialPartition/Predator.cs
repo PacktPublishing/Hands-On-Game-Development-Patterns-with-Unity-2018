@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 
-public class Predator : IUnit
+public class Predator : MonoBehaviour, IUnit
 {
-    private int m_Cell;
+    private int m_Square;
 
-    public void AddToGrid(int cell)
+    public void AddToGrid(int square)
     {
-        m_Cell = cell;
-        Debug.Log("Hunter added to cell number: " + cell);
+        m_Square = square;
     }
 
     public int GetGridPosition()
     {
-        return m_Cell;
+        return m_Square;
     }
 }

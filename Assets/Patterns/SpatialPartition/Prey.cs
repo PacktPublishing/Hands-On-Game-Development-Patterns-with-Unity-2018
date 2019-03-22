@@ -1,14 +1,16 @@
-﻿public class Prey : IUnit
-{
-    private int m_Cell;
+﻿using UnityEngine;
 
-    public void AddToGrid(int cell)
+public class Prey : MonoBehaviour, IUnit
+{
+    private int m_Square;
+
+    public void AddToGrid(int square)
     {
-        m_Cell = cell;
+        m_Square = square;
     }
 
     public int GetGridPosition()
     {
-        return m_Cell;
+        return m_Square;
     }
 }
