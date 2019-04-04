@@ -7,7 +7,7 @@ This is the code repository for [Hands-On Game Development Patterns with Unity 2
 **Create engaging games by using industry-standard design patterns with C#**
 
 ## What is this book about?
-0
+Traditional building blocks of a robust architecture, such as design patterns, cannot be applied in Unity without being adapted to the Engine's unique way of doing things. We will review design patterns that are currently used by professional game programmers in indie, mobile, and AAA studios. We will also examine the infamous anti-patterns. 
 
 This book covers the following exciting features:
 
