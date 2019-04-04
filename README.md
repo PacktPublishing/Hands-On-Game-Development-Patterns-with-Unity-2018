@@ -47,9 +47,6 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Unity Virtual Reality Projects - Second Edition  [[Packt]](https://prod.packtpub.com/in/game-development/unity-virtual-reality-projects-second-edition?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1788478800)
 
-*  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
-
-*  [[Packt]]() [[Amazon]](https://www.amazon.com/dp/)
 
 ## Get to Know the Author
 **David Baron**
