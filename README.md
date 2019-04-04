@@ -56,18 +56,6 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 is a game developer with over 15 years' experience in the industry. He has worked for some of the top AAA, mobile, and indie game studios in Montreal, Canada. He has a skillset that includes programming, design, and 3D art.
 As a programmer, he has worked on a multitude of games for various platforms, including virtual reality, mobile, and consoles.
 
-****
-0
-
-****
-0
-
-****
-0
-
-****
-0
-
 
 
 ### Suggestions and Feedback
