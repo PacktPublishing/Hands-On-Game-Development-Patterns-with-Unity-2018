@@ -24,9 +24,9 @@ namespace Pattern.DependencyInjection
             IEngine nitroEngine = new NitroEngine();
             IDriver androidDriver = new AndroidDriver();
 
-            m_PlayerBike.SetEngine(jetEngine);
-            m_PlayerBike.SetDriver(humanDriver);
-            m_PlayerBike.StartEngine();
+            m_AndroidBike.SetEngine(nitroEngine);
+            m_AndroidBike.SetDriver(androidDriver);
+            m_AndroidBike.StartEngine();
         }
 
         void Update()
