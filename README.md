@@ -1,3 +1,8 @@
+## $5 Tech Unlocked 2021!
+[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/hands-on-game-development-patterns-with-unity-2019/9781789349337)
+-----
+*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1789349338).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
+
 # Hands-On Game Development Patterns with Unity 2019 
 
 <a href="https://prod.packtpub.com/in/game-development/hands-game-development-patterns-unity-2019?utm_source=github&utm_medium=repository&utm_campaign="><img src="https://prod.packtpub.com/media/catalog/product/cache/a22c7d190d97ca25f5f1089471ab8502/b/1/b11284_mockup_cover.png" alt="Hands-On Game Development Patterns with Unity 2019 " height="256px" align="right"></a>
